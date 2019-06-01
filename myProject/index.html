@@ -18,8 +18,10 @@
     </style>
 </head>
 <body bgcolor="#6b8e23">
-<!--title:鼠标悬停的时候提示msg-->
-<a href="http://www.baidu.com" title="测试文本">百度</a>
+<!--title:鼠标悬停的时候提示msg
+  target标签：_blank 在新标签中打开
+ -->
+<a href="http://www.baidu.com" title="测试文本" target="_blank">百度</a>
 <a href="#">超链接</a>
 
 <h4 align="center">--------------h标签------------</h4>
@@ -43,8 +45,10 @@
 </span>
 
 <h4>--------------图片标签img标签------------</h4>
-<!--alt：图片加载不出来的时候提示-->
-<img src="img/1559374176(1).png" title="图片测试" alt="图片未显示">
+<!--alt：图片加载不出来的时候提示，只设置width的时候height会等比缩放,border设置边框 1px-->
+<img src="img/1559374176(1).png" title="图片测试" alt="图片未显示" width="413" border="5">
+<!--img aline属性要结合<p>标签使用，以文本作为参照物-->
+<p>图片aline属性<img src="img/1559374176(1).png" align="left"></p><br>
 <h4>--------------hr水平线标签------------</h4>
 <!--水平线hr-->
 <hr width="50%" color="red">
@@ -57,5 +61,45 @@
 
 <h4>--------------del标签------------</h4>
 <del>代表被删除，直线划过</del>
+
+<h4>--------------字体大小标签------------</h4>
+<p>这是普通字体</p>
+<small>这是小号字体</small>
+<br>
+<big>这是大号字体</big>
+<br>
+<strong>strong标签：强调内容，字体加粗</strong><br>
+<br>
+<hr color="red">
+<h4>--------------列表ul、ol、li标签------------</h4>
+<!--无序列表，不遵循规则 type:square 前面是方块的点-->
+<ul type="square">
+    <li>
+        第一项
+    </li>
+    <li>
+        第二项
+    </li>
+    <li>
+        第三项
+    </li>
+</ul>
+<h4>--------------有序列表ol------------</h4>
+<!--有序列表 type:A 前面顺序是A-Z-->
+<ol type="A">
+    <li>
+        第一项
+    </li>
+    <li>
+        第二项
+    </li>
+    <li>
+        第三项
+    </li>
+</ol>
+<!--返回顶部-->
+<a href="#">
+    <img src="img/1559374176(1).png" width="50" height="50"><br>
+    <span>返回顶部</span></a>
 </body>
 </html>
