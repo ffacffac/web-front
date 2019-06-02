@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--使用frameset布局不能有body-->
+<!--按行分割，第一个frame占200px,剩下的空间分配给第二个frame-->
+<!--border="1" bordercolor="red" 设置边框和边框颜色，noresize="noresize"不能拖动块的大小
+scrolling="no"设置滚动条
+-->
+<!--<frameset rows="200px,*">-->
+<frameset cols="200px,*" border="1" bordercolor="red" noresize="noresize">
+<frame src="http://www.baidu.com">
+<frameset rows="40%,*">
+<frame src="http://www.360.com" scrolling="no">
+<frame src="http://www.taobao.com">
+</frameset>
+</frameset>
+<!--当上边的frameset不被浏览器识别的时候，就显示下面的noframes标签内容-->
+<noframes>
+<body>
+你的浏览器不支持frameset框架布局
+</body>
+</noframes>
+
+<!--<body>-->
+<!--&lt;!&ndash;iframe标签需要在body标签中&ndash;&gt;-->
+<!--&lt;!&ndash;target="iframeName"点击后指定到iframe内容&ndash;&gt;-->
+<!--<a href="http://www.taobao.com" target="iframeName">点击</a><br>-->
+<!--<iframe name="iframeName" src="http://www.baidu.com" width="400" height="600">浏览器不支持iframe</iframe>-->
+<!--</body>-->
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form表单案例</title>
+</head>
+<body>
+<!--action="" URL，form发送数据向何处 name=”“名字-->
+<!--enctype="multipart/form-data" 对表单数据进行编码，如上传文件时以二进制流进行编码-->
+<!--method="post"，请求方式，默认是get请求-->
+<!--form 的name属性指定了才能提交数据到服务端-->
+<!--method="get" get请求的话，用户名、密码的指定name输入地址，信息会在地址栏中显示，不安全-->
+<form action="" name="myForm" enctype="multipart/form-data" method="get">
+    用户名：<input type="text" name="user" placeholder="请输入用户名"/>
+    密码：<input type="password" name="pwd" placeholder="请输入密码"/>
+    <br>
+    <hr>
+    <!--name="work"相同，则是相同的一组，选中的话会互斥，checked="checked"默认选中-->
+    <!--label for="myWork" 和 input id="myWork"关联，当点击到 【作业写了】的时候，则也可以出发radio-->
+    <label for="myWork"> 作业写了</label>
+    <input type="radio" name="work" checked="checked" id="myWork"/>
+    作业没写<input type="radio" name="work"/>
+    <hr>
+    复选框0<input type="checkbox" name="myCheckbox" checked="checked">
+    复选框1<input type="checkbox" name="myCheckbox">
+    复选框2<input type="checkbox" name="myCheckbox">
+    <hr>
+    <br>
+    <!--【学生信息】信息在框框上面-->
+    <fieldset>
+        <legend>学生信息</legend>
+        姓名：<input type="text">
+        性别：
+        男<input type="radio" name="sex">
+        女<input type="radio" name="sex">
+    </fieldset>
+    <!--有提交作用-->
+    <input type="submit" name="提交">
+    <!--button类型要结合js才有效果-->
+    <input type="button" value="提交按钮">
+    <!--有可能提交两次-->
+    <input type="image" src="img/icon.png">
+    <input type="reset" value="重置">
+</form>
+</body>
+</html>

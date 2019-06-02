@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select demo</title>
+</head>
+<body>
+<form action="">
+    <!--selected="selected" 默认选中，disabled不可选中-->
+    <select name="mySelect" id="idSelect">
+        <!--optgroup进行分组-->
+        <optgroup label="中国">
+            <option value="beijing"> 北京</option>
+            <option value="shanghai" disabled="disabled"> 上海</option>
+            <option value="guangzhou"> 广州</option>
+            <option value="shenzhen" selected="selected"> 深圳</option>
+        </optgroup>
+        <optgroup label="外国">
+            <option value="mg"> 美国</option>
+            <option value="yg"> 英国</option>
+            <option value="dg"> 德国</option>
+            <option value="fg"> 法国</option>
+        </optgroup>
+    </select>
+    <br>
+    <br>
+    <p>---------------文本域-------------</p>
+    <!--textarea：required，必填 加空格或者回车的时候placeholder不显示-->
+    <textarea placeholder="请填写你的描述信息" required="required"></textarea>
+    <br>
+    <p>---------------文件上传-------------</p>
+    请选择文件：<input type="file">
+    <p>---------------文本域-------------</p>
+    range属性，范围值，滑动范围：<input type="range" max="100" min="1"><br>
+    search属性，请输入关键字搜索：<input type="search"><br>
+    color属性，选中颜色：<input type="color"><br>
+    <!-- type="hidden"：隐藏属性，提价的时候get地址栏会-->
+    <input type="hidden" name="hid" value="隐藏的值">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
