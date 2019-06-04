@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div demo</title>
+    <style>
+        /*使用header标签的时候。可以去掉前面的.符号*/
+        .header {
+            height: 100px;
+            width: 500px;
+            background-color: red;
+        }
+
+        .content {
+            height: 200px;
+            width: 500px;
+            background-color: green;
+        }
+
+        .footer {
+            height: 100px;
+            width: 500px;
+            background-color: aqua;
+        }
+
+        .nav {
+            height: 70px;
+            width: 500px;
+            background-color: black;
+        }
+
+        .left {
+            height: 200px;
+            width: 40%;
+            background-color: olive;
+            display: inline-block;
+        }
+
+        .right {
+            width: 50%;
+            height: 150px;
+            background-color: #1a7dff;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<!--class定义类名，使用符号.表示：.header，class命名可以重复-->
+<!--id定义ID，使用符合#表示：#header，id命名不能重复-->
+<!--使用时，header标签等于div class="header"，已引用上面header样式-->
+<!--同理还有nav、footer-->
+<!--<header></header>-->
+<div class="header" id=""></div>
+<div class="nav"><p align="center">导航条</p></div>
+<div class="content">
+    <div class="left"></div>
+    <div class="right">
+        <!--点击展开详细内容-->
+        <details>
+            <summary>点击查看更多</summary>
+            <p>class定义类名，使用符号.表示：.header，class命名可以重复</p>
+        </details>
+    </div>
+</div>
+<div class="footer"></div>
+<br>
+<br>
+<br>
+<span>progress进度条：</span>
+<progress max="100" value="30"></progress>
+<br>
+<span>video：</span>
+<video controls>
+    <!--source设置支持mp4、avi等多种格式-->
+    <source src="/res/iv.mp4" type="video/mp4">
+    <source src="/res/iv.avi" type="video/avi">
+    浏览器不支持video标签
+</video>
+<br>
+<!--datalist: input list="car"与 datalist id="car"关联起来-->
+<span>datalist，提示可能输入的值：</span>
+输入车型：<input type="text" list="car">
+<datalist id="car">
+    <option value="1">奔驰</option>
+    <option value="2">宝马</option>
+    <option value="3">奥迪</option>
+</datalist>
+</body>
+</html>

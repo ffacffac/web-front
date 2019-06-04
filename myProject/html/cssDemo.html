@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css 选择器</title>
+    <link type="text/css" rel="stylesheet" href="../css/ahover.css">
+    <style>
+        p.myhr {
+            color: #0f1aff;
+        }
+
+        .imp {
+            font-weight: bold;
+        }
+
+        .war {
+            font-style: italic;
+        }
+
+        /*多类选择器*/
+        /*同时拥有imp和war样式，还有自己新的样式属性*/
+        .imp.war {
+            background: #ff00aa;
+        }
+
+        /*---------------属性选择器-------------------*/
+        /*a标签里面的hraf属性颜色red*/
+        a[href] {
+            color: red;
+        }
+
+        a[href][title] {
+            color: green;
+        }
+
+        /*指定具体的href值*/
+        a[href="http://www.jd.com"][title] {
+            color: #ff4bd8;
+        }
+
+        /*根据部分属性值选择，class值包含my即可匹配*/
+        p[class~="my"] {
+            color: green;
+        }
+
+        p[class~="my"][title~="mypp"] {
+            color: yellow;
+        }
+
+        /*----------------其他属性值选择器----------------*/
+        /*[abc^="def"]	选择 abc 属性值以 "def" 开头的所有元素 */
+        /*[abc$="def"]	选择 abc 属性值以 "def" 结尾的所有元素*/
+        /*[abc*="def"]	选择 abc 属性值中包含子串 "def" 的所有元素*/
+
+        /*----------------后代选择器----------------*/
+        /*ul标签下所有的em标签都会被应用到，不管嵌套多少层*/
+        ul em {
+            color: red;
+        }
+
+        /*----------------子元素选择器----------------*/
+        /*第一个h3里面的strong标签受影响，第二个不会*/
+        h3 > strong {
+            color: red;
+        }
+
+        /*.ta {*/
+        /*border: #1a7dff solid 1px;*/
+        /*}*/
+
+        table.ta td > p {
+            color: #9b9cff;
+        }
+
+        /*----------------相邻兄弟选择器----------------*/
+        /*ul li+li： ul列表下除第一项之外都受影响*/
+        /*ol li+li： ol列表下除第一项之外都受影响*/
+        /*li + li：ul,ol 只会把列表中的第二个和第三个列表项变为粗体。第一个列表项不受影响*/
+        li + li {
+            font-weight: bold;
+        }
+
+        /*p元素下的第一个i元素都将受影响*/
+        p > i:first-child {
+            font-weight: bold;
+            color: red;
+        }
+
+        /*----------------内边距外边距----------------*/
+        #outer {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin-top: 20px;
+            /*border: red solid;*/
+            /*padding: 1px;*/
+        }
+
+        #inner {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            /*如果外部的div不设置内边距或者边框，
+            则两个div的 margin-top取值最大的那个（叠加）
+            */
+            margin-top: 10px;
+        }
+
+        .d {
+            width: 500px;
+            height: 50px;
+            background: #1a7dff;
+        }
+
+        .d1 {
+            margin-top: 20px;
+        }
+
+        .d2 {
+            margin-top: 10px;
+        }
+
+        /*---------------------------------图像与文字结合--------------------*/
+        p img.top {
+            vertical-align: text-top;
+        }
+
+        p img.bottom {
+            vertical-align: text-bottom;
+        }
+
+        /*---------------------------------定位--------------------*/
+        /*图片浮动与右侧*/
+        p img.float {
+            float: right;
+            /*带有边框，虚线*/
+            border: 1px dotted black;
+            margin: 0 0 15px 20px;
+        }
+
+        .fSpam {
+            float: left;
+            width: 0.7em;
+            font-size: 400%;
+            font-family: Algerian, "Courier New", serif;
+            line-height: 80%;
+        }
+    </style>
+</head>
+<body>
+<p class="myhr">---------------------------------多类选择器--------------------</p>
+<p class="imp">imp样式的段落</p>
+<p class="war">war样式的段落</p>
+<p class="war imp">同时包含imp和war样式的段落</p>
+<p class="myhr">---------------------------------属性选择器--------------------</p>
+<a href="http://www.baidu.com">属性选择器a</a>
+<a href="#" title="属性选择器">属性选择器a</a>
+<a href="http://www.jd.com" title="属性选择器">属性选择器a</a>
+<p class="my ui">根据部分属性值选择</p>
+<p class="my" title="mypp is fen">根据部分属性值选择</p>
+
+<p class="myhr">---------------------------------后代选择器--------------------</p>
+<ul>
+    <li>List item 1
+        <ol>
+            <li>List item <em>1-1</em></li>
+            <li>List item 1-2</li>
+            <li>List item 1-3
+                <ol>
+                    <li>List item 1-3-1</li>
+                    <li>List item <em>1-3-2</em></li>
+                    <li>List item 1-3-3</li>
+                </ol>
+            </li>
+            <li>List item 1-4</li>
+        </ol>
+    </li>
+    <li>List <em>item 2</em></li>
+    <li>List item 3</li>
+</ul>
+
+<p class="myhr">---------------------------------选择子元素--------------------</p>
+<h3>This is <strong>very</strong> <strong>very</strong> important.</h3>
+<h3>This is <em>really <strong>very</strong></em> important.</h3>
+<table class="ta" border="1">
+    <tr>
+        <td><p>星期一</p></td>
+        <td><p>星期二</p></td>
+        <td><p>星期三</p></td>
+    </tr>
+    <tr>
+        <td><p>星期一</p></td>
+        <td><p>星期二</p></td>
+        <td><p>星期三</p></td>
+    </tr>
+</table>
+<p class="myhr">---------------------------------相邻兄弟选择器--------------------</p>
+<ul>
+    <li>ul列表1</li>
+    <li>ul列表2</li>
+    <li>ul列表3</li>
+</ul>
+<ol>
+    <li>ol列表1</li>
+    <li>ol列表2</li>
+    <li>ol列表3</li>
+</ol>
+
+<p class="myhr">---------------------------------锚伪类：伪类a:**--------------------</p>
+<p><b><a class="one" href="list.html" target="_blank">这个链接改变颜色</a></b></p>
+<p><b><a class="two" href="list.html" target="_blank">这个链接改变字体大小</a></b></p>
+<p><b><a class="three" href="list.html" target="_blank">这个链接改变背景色</a></b></p>
+<p><b><a class="four" href="list.html" target="_blank">这个链接改变装饰（显示隐藏下划线）</a></b></p>
+<p class="myhr">---------------------------------锚伪类：伪类first-child--------------------</p>
+<p>some <i>text</i> . some <i>text</i>.</p>
+<p>some <i>text</i>. some <i>text</i>.</p>
+
+<p class="myhr">---------------------------------内边距、外边距--------------------</p>
+<div id="outer">
+    <div id="inner">
+    </div>
+</div>
+<p>注释：请注意，如果不设置 div 的内边距和边框，那么内部 div 的上外边距将与外部 div 的上外边距合并（叠加）。</p>
+<hr>
+<div class="d d1"></div>
+<div class="d d2"></div>
+<p class="myhr">---------------------------------图像与文字结合--------------------</p>
+<p>这张图片在<img class="top" src="../img/icon.png" alt="这是图片">段落顶部对齐</p>
+<p>这张图片与<img class="bottom" src="../img/icon.png" alt="这是图片">段落底部对齐</p>
+<p class="myhr">---------------------------------定位：float浮动定位--------------------</p>
+<p>
+    <!--右浮动，使图像位于右侧-->
+    <img class="float" src="../img/icon.png"/>
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+</p>
+<p>
+    <!--使段落的首字母浮动于左侧，并向这个字母添加样式。-->
+    <span class="fSpam">T</span>his is some text.
+    This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+</p>
+<p>
+    在上面的段落中，文本的第一个字母包含在一个 span 元素中。这个 span 元素的宽度是当前字体尺寸的 0.7 倍。span 元素的字体尺寸是 400%，行高是 80%。span 中的字母字体是 "Algerian"
+</p>
+</body>
+</html>
