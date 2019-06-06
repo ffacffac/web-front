@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位demo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background: #1a7dff;
+            width: 400px;
+            height: 400px;
+            /*绝对定位，父元素必须指定relative*/
+            position: relative;
+        }
+
+        p {
+            background-color: red;
+            width: 100px;
+            height: 80px;
+            /*绝对定位，子元素必须指定absolute*/
+            position: absolute;
+            top: 100px; /*距离y轴100*/
+            left: 100px; /*距离x轴100*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>绝对定位</p>
+</div>
+</body>
+</html>

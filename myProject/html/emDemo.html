@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>em 单位demo</title>
+    <style>
+        div {
+            font-size: 40px;
+            /*em为单位，大小相对于font-size：40px*/
+            width: 10em; /*10*40=400px*/
+            height: 10em;
+            border: red solid 1px;
+        }
+
+        p {
+            /*这里的font-size使用em，则字体大小相对于父元素字体大小：40*0.5=20px*/
+            font-size: 0.5em;
+            width: 10em; /*相对于font-size：20px，width=20*10=200px*/
+            height: 10em;
+            border: purple solid 1px;
+        }
+
+        span {
+            font-size: 0.5em;
+            width: 10em;
+            height: 10em;
+            display: block;
+            border: #1ce4ff solid 1px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    我是父元素
+    <p>
+        我是子元素
+        <span>我是孙子元素</span>
+    </p>
+</div>
+</body>
+</html>
