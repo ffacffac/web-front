@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        div.am {
+            width: 100px;
+            height: 100px;
+            background: #1a7dff;
+        }
+
+        @keyframes myDH {
+            from {
+                background: yellow;
+            }
+            to {
+                background: #ff00aa;
+            }
+        }
+
+        div.am:hover {
+            /*引用动画*/
+            animation: myDH 2s;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            /*border-radius: 50%;*/
+        }
+
+        /*模仿音乐播放*/
+        @keyframes myRor {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                /*旋转到360度*/
+                transform: rotate(360deg);
+            }
+        }
+
+        img:hover {
+            animation: myRor 2s linear infinite;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 5px;
+            padding: 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            padding-left: 5px;
+        }
+
+        /*三角形*/
+        span {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 10px solid green;
+            border-bottom: 10px solid transparent;
+        }
+
+        .smallBig {
+            width: 80px;
+            height: 80px;
+            background: #ff00aa;
+            transition: 1s ease-in-out;
+        }
+
+        @keyframes smallBigAmin {
+            from {
+                width: 80px;
+                height: 80px;
+            }
+            to {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .smallBig:hover {
+            animation: smallBigAmin 2s;
+        }
+    </style>
+</head>
+<body>
+<div class="am"></div>
+<img src="../img/icon.png" alt="">
+<br>
+<br>
+<p>-----------------------绘制三角形-----------------------</p>
+<ul>
+    <li><span></span><a href="#">列表1</a></li>
+    <li><span></span><a href="#">列表1</a></li>
+    <li><span></span><a href="#">列表1</a></li>
+    <li><span></span><a href="#">列表1</a></li>
+</ul>
+
+<div class="smallBig"></div>
+
+</body>
+</html>

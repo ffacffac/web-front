@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3阴影字体</title>
+    <style>
+        .txt1 {
+            text-shadow: 5px 5px 15px gray;
+        }
+
+        .txt2 {
+            background-color: #1a7dff;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            /*显示过渡*/
+            /*transition: 1s;*/
+            border-radius: 10px;
+            /*阴影 参数一：水平阴影（阴影倾斜度）  参数二：垂直阴影（阴影高度）
+            参数三：阴影模糊距离 参数四：颜色*/
+            box-shadow: 5px 5px 5px gray;
+        }
+
+        /*引入自定义字体sf.ttf为字体文件*/
+        @font-face {
+            font-family: myFont;
+            src: url("../res/sf.ttf");
+        }
+
+        .txt3 {
+            /*引用自定义字体*/
+            font-family: myFont, serif;
+        }
+
+        .txt4 {
+            width: 200px;
+            height: 50px;
+            transition: 1s ease-in-out;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        p.txt4:hover {
+            /*动画，平滑过渡*/
+            transition: 1s 1s ease-in-out;
+            width: 300px;
+            height: 50px;
+        }
+
+        .jt {
+            background: url("../img/ic_jts.png") no-repeat right;
+        }
+
+        a.jt:hover {
+            background: url("../img/ic_jtx.png") no-repeat right;
+        }
+
+        .jt, a.jt:hover {
+            display: block;
+            height: 35px;
+            width: 7em;
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            background-size: 20px;
+            padding-right: 15px;
+            transition: 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<p class="txt1">字体阴影</p>
+<p class="txt2">圆角阴影</p>
+<p class="txt3">引用自定义字体</p>
+<p class="txt4">平滑过渡显示</p>
+<a class="jt" href="#">点击箭头切换</a>
+</body>
+</html>

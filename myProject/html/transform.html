@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <style>
+        div.xz {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            /*配合旋转过渡动画*/
+            transition: 2s ease-in-out;
+        }
+
+        div.xz:hover {
+            /*旋转180度*/
+            transform: rotate(180deg);
+        }
+
+        a {
+            display: block;
+            width: 5em;
+            height: 1.3em;
+            background: url("../img/ic_jts.png") no-repeat right;
+            background-size: 20px;
+            padding-right: 10px;
+            margin-top: 20px;
+            transition: 1s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: url("../img/ic_jts.png") no-repeat right;
+            transform: rotate(90deg);
+        }
+
+        img {
+            transition: 0.4s ease-in-out;
+        }
+
+        img:hover {
+            background: url("../img/ic_jts.png") no-repeat;
+            transform: rotate(90deg);
+            /*transform: rotateX();*/
+            /*transform: rotateY();*/
+        }
+
+        .ro {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s ease-in-out;
+        }
+
+        .ro:hover {
+            /*transform: rotate(180deg);*/
+            /*transform: rotateX(60deg);*/
+            /*transform: rotateY(60deg);*/
+            /*参数一：右偏移 参数二：负数，上偏移；正数，下偏移 */
+            transform: translate3d(0px, 10px, 0px);
+            box-shadow: 5px 10px 5px gray;
+        }
+
+        /*点击商品列表，显示信息*/
+        .ro1 {
+            width: 200px;
+            height: 200px;
+            background: #1a7dff;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            /*隐藏溢出的内容*/
+            overflow: hidden;
+        }
+
+        .myHinde {
+            width: 200px;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+            background: #1ce4ff;
+            position: absolute;
+            bottom: -40px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .ro1:hover p {
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="xz"></div>
+<a href="#">点我旋转</a>
+<img src="../img/ic_jts.png" alt="" title="点我旋转">
+<div class="ro">旋转测试</div>
+<div class="ro1">
+    <p class="myHinde">
+
+    </p>
+</div>
+</body>
+</html>

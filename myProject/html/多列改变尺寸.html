@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列</title>
+    <style>
+        p {
+            /*指定3列*/
+            column-count: 3;
+            /*列之间的间隔为30px*/
+            column-gap: 30px;
+            /*列之间的线条*/
+            column-rule: 1px red solid;
+            /*background: url("../img/1559374176(1).png");*/
+        }
+
+        /*可以改变大小*/
+        .reset {
+            width: 100px;
+            height: 100px;
+            border: 1px red solid;
+            /*设置可左右方向改变大小*/
+            resize: both;
+            /*要配合这个属性*/
+            overflow: auto;
+        }
+
+        /*标准盒模型size是不包含padding值的，
+        怪异盒模型包含padding
+        */
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        /*标准盒模型*/
+        .boxSizeNormal {
+            background: red;
+            padding: 10px;
+            /*box-sizing 运行以标准盒模型或者怪异（IE）盒模型来定义区域*/
+            box-sizing: content-box;
+        }
+
+        /*怪异盒模型*/
+        .boxSizeQueer {
+            padding: 10px;
+            background: #1a7dff;
+            /*box-sizing指定怪异盒模型*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<p>案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列
+    案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列
+    案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列
+    案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列案例分列多列</p>
+</body>
+<div class="reset"></div>
+<!--标准盒模型和怪异盒模型-->
+<div class="box boxSizeNormal"></div>
+<div class="box boxSizeQueer"></div>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*W3C 标准是div（100*100）是不包含border和padding的*/
+        /*但是在IE旧版本的浏览器下（好像是IE10以下），
+        div（100*100）包含border和padding，称为怪异盒子模型*/
+        /*<!DOCTYPE html> 最上面DOCTYPE丢失了才回出发怪异盒子模型*/
+        div {
+            width: 100px;
+            height: 100px;
+            border: 10px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

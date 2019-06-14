@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伸缩模型</title>
+    <style>
+        ul {
+            /*伸缩盒模型*/
+            display: flex;
+            /*浏览器伸缩，最小400px就不能在缩小了*/
+            min-width: 400px;
+        }
+
+        .item {
+            /*伸缩盒模型：子项占比都相同
+            新的属性，支持的还不算好
+            */
+            flex-grow: 1;
+            background-color: #1a7dff;
+            margin: 10px;
+            color: white;
+            list-style: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+</ul>
+</body>
+</html>

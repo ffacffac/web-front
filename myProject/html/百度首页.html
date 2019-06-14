@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度首页</title>
+    <style>
+        .divWeather {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .divMore {
+            float: right;
+            margin-right: 20px;
+        }
+
+        a {
+            color: black;
+        }
+
+        .clear {
+            clear: both;
+            height: 150px;
+        }
+
+        .searchForm {
+            width: 610px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        input {
+            height: 40px;
+            font-size: 16px;
+            float: left;
+            padding: 0;
+        }
+
+        input[type="search"] {
+            width: 500px;
+            /*去掉搜索框样式*/
+            outline: none;
+            /*缩进元素中文本的首行。输入文字距离左边10px*/
+            text-indent: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #317EF3;
+            width: 100px;
+            border-style: none;
+            color: white;
+        }
+
+        .imgSearch {
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            left: 460px;
+            margin-top: 3px;
+        }
+
+        .bdlogo {
+            width: 270px;
+            height: 129px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="divWeather">
+        <span>广州:</span>
+        <span>31<sup>。</sup>C 优 31</span>
+        <a href="#">换肤</a>
+        <a href="#">消息</a>
+    </div>
+    <div class="divMore">
+        <a href="#">新闻</a>
+        <a href="#">hao123</a>
+        <a href="#">地图</a>
+        <a href="#">贴吧</a>
+        <a href="#">学术</a>
+        <a href="#">设置</a>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="bdlogo">
+    <img class="bdlogo" src="../img/bd_logo.png">
+</div>
+<form action="" class="searchForm">
+    <input type="search" name="vSearch">
+    <input type="submit" value="百度一下">
+    <img class="imgSearch" src="../img/ic_camera.png">
+</form>
+</body>
+</html>

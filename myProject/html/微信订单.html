@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信订单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .minw {
+            min-width: 510px;
+        }
+
+        header {
+            height: 45px;
+            background: #fa486a;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            float: left;
+            text-align: center;
+            line-height: 45px;
+            font-size: 18px;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        header a:hover {
+            background-color: #fa2680;
+        }
+
+        header span {
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            font-size: 22px;
+        }
+
+        .wl {
+            display: flex;
+            height: 70px;
+            margin-top: 1.5em;
+        }
+
+        .wl1 {
+            flex-grow: 2;
+            background: url("../img/ic_order.png") no-repeat center;
+            background-size: 64px;
+        }
+
+        .wl1_1 {
+            background: url("../img/ic_order1.png") no-repeat center;
+        }
+
+        .wl1_wl {
+            background: url("../img/ic_wl.png") no-repeat center;
+        }
+
+        .wl1_qs {
+            background: url("../img/ic_qs.png") no-repeat center;
+        }
+
+        .wl2 {
+            flex-grow: 1;
+            background: url("../img/ic_arraw.png") no-repeat center;
+            background-size: 40px;
+        }
+
+        .hwxx {
+            padding: 10px;
+        }
+
+        .zfxx {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .hwxxTitle {
+            font-size: 1.6em;
+            border-left: 2px solid #fa486a;
+            margin-left: 10px;
+            padding-left: 10px;
+            margin-bottom: 0.8em;
+            margin-top: 40px;
+        }
+
+        .hwxx p span, i, .zfxx p span, i {
+            padding-left: 10px;
+            font-family: "Microsoft YaHei", serif;
+            font-size: 16px;
+        }
+
+        .oldPrice {
+            text-decoration: line-through;
+        }
+
+        .tjdd {
+            width: 50%;
+            height: 50px;
+            margin: 60px auto 20px;
+            text-align: center;
+        }
+
+        .tjdd a {
+            height: 45px;
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            line-height: 45px;
+            text-align: center;
+            background-color: #b3c3b4;
+            font-family: "Microsoft YaHei", serif;
+            color: white;
+            text-decoration: none;
+            /*阴影 参数一：水平阴影（阴影倾斜度）  参数二：垂直阴影（阴影高度）
+            参数三：阴影模糊距离 参数四：颜色*/
+            box-shadow: 3px 3px 5px gray;
+        }
+
+        .tjdd a:hover {
+            background-color: #fa486a;
+        }
+
+        .des {
+            width: 100%;
+            height: 5em;
+        }
+
+        footer {
+            width: 100%;
+            height: 2.6em;
+            margin-top: 10px;
+            position: fixed;
+            bottom: 5px;
+        }
+
+        .fooMenu {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            background: #fa486a;
+        }
+
+        footer a {
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 2.6em;
+            font-family: "Microsoft YaHei", serif;
+            font-size: 14px;
+        }
+
+        .menuMy {
+            background: url("../img/ic_my1.png") no-repeat top;
+        }
+
+        .menuHome {
+            background: url("../img/ic_home.png") no-repeat top;
+        }
+
+        .menuType {
+            background: url("../img/ic_type.png") no-repeat top;
+        }
+
+        .menuHost {
+            background: url("../img/ic_host.png") no-repeat top;
+        }
+
+        .menu1 {
+            flex-grow: 1;
+            text-align: center;
+            background-size: 20px;
+            padding-top: 13px;
+            background-position-y: 3px;
+        }
+
+        .menu1:hover {
+            background-color: #b3c3b4;
+        }
+    </style>
+</head>
+<body>
+<header class="minw">
+    <!--<span id="icBack">&lt;</span>-->
+    <a href="#">&lt;返回</a>
+    <span>订单详情</span>
+</header>
+<div class="minw">
+    <div class="wl">
+        <div class="wl1"></div>
+        <div class="wl2"></div>
+        <div class="wl1 wl1_1"></div>
+        <div class="wl2"></div>
+        <div class="wl1 wl1_wl"></div>
+        <div class="wl2"></div>
+        <div class="wl1 wl1_qs"></div>
+    </div>
+    <div class="hwxx">
+        <p class="hwxxTitle">货物信息</p>
+        <p><span>货物信息：</span><i>《三国演义》第五版</i></p>
+        <p><span>作者：</span><i>罗贯中</i></p>
+        <p><span>出版日期：</span><i>2019年6月11日</i></p>
+        <p><span>出版社：</span><i>广州日报出版社</i></p>
+    </div>
+    <div class="zfxx">
+        <p class="zfxxTitle hwxxTitle">支付信息</p>
+        <p><span>原价格：</span><i class="oldPrice">￥56.00</i></p>
+        <p><span>现价格：</span><i>￥46.00</i></p>
+        <p><span>下单时间：</span><i>2019-06-11 12:00</i></p>
+        <p><span>收货地址：</span><i>广州市天河区金星大厦</i></p>
+    </div>
+    <div class="tjdd">
+        <a href="#">取消订单</a>
+    </div>
+    <div class="des"></div>
+</div>
+<footer class="minw">
+    <div class="fooMenu">
+        <div class="menu1 menuHome"><a href="#">首页</a></div>
+        <div class="menu1 menuType"><a href="#">分类</a></div>
+        <div class="menu1 menuHost"><a href="#">热销</a></div>
+        <div class="menu1 menuMy"><a href="#">我的</a></div>
+    </div>
+</footer>
+</body>
+</html>

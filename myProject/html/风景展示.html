@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风景展示</title>
+    <style>
+        .parFj {
+            width: 400px;
+            height: 650px;
+            margin: 0 auto;
+        }
+
+        .fj {
+            width: 100%;
+            height: 250px;
+            background: url("../img/bg_fj.jpg");
+        }
+
+        .des {
+            width: 100%;
+            height: 400px;
+            background-color: #ff7f6e;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        div a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .djck {
+            display: block;
+            border: 1px white solid;
+            width: 11em;
+            height: 1.5em;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 1.5em;
+            position: absolute;
+            bottom: 10px;
+            left: 30%;
+        }
+
+        .sjx {
+            width: 0;
+            height: 0;
+            display: inline-block;
+            border: 12px solid transparent;
+            border-bottom-color: #ff7f6e;
+            position: absolute;
+            top: -24px;
+            left: 15px;
+        }
+
+        .dzzfPar {
+            position: absolute;
+            right: 10px;
+            padding: 5px
+        }
+
+        .divDZ {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .divZF {
+            float: left;
+        }
+
+        .dzNum {
+            color: white;
+            font-family: "Microsoft YaHei", serif;
+            font-size: 14px;
+        }
+
+        .dzImg {
+            background: url("../img/ic_dz.png") no-repeat right;
+        }
+
+        .zfImg {
+            background: url("../img/ic_zf.png") no-repeat right;
+        }
+
+        .zdzf {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-size: 20px;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="parFj">
+    <div class="fj"></div>
+    <div class="des">
+        <span class="sjx"></span>
+        <a class="djck" href="#">点击查看</a>
+        <!--点赞，转发-->
+        <div class="dzzfPar">
+            <div class="divDZ">
+                <span class="dzNum">100w+</span>
+                <span class="dzImg zdzf"></span>
+            </div>
+            <div class="divZF">
+                <span class="dzNum">758</span>
+                <span class="zfImg zdzf"></span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
