@@ -1,0 +1,78 @@
+/*智能家居*/
+.text-cont h3 {
+    font-size: 30px;
+    color: #0a0b08;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-cont .qyzx-text {
+    color: white;
+}
+
+.text-cont p:nth-child(2) {
+    color: #656f72;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/*.text-cont .qyzx-text {*/
+/*color: white;*/
+/*}*/
+
+.text-cont a {
+    display: block;
+    font-size: 38px;
+    text-align: center;
+    color: #f29400;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.text-cont p:nth-child(4) {
+    width: 450px;
+    text-align: center;
+    line-height: 25px;
+    margin: 0.5em auto 0;
+    font-family: "Microsoft YaHei", serif;
+}
+
+.zn-img-cont {
+    width: 100%;
+    height: 180px;
+}
+
+.zn-img-cont:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*.zn-icon {*/
+/*width: 120px;*/
+/*background: url("../img/ic_znjj_icon.png") no-repeat center;*/
+/*background-size: 80px;*/
+/*padding-top: 150px;*/
+/*float: left;*/
+/*text-align: center;*/
+/*}*/
+
+.zn-img-cont ul {
+    width: 100%;
+    height: 200px;
+    list-style: none;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.zn-img-cont ul li {
+    width: 120px;
+    display: inline-block;
+    background: url("../../img/ic_znjj_icon.png") no-repeat center;
+    background-size: 80px;
+    padding-top: 150px;
+    margin-left: 140px;
+}

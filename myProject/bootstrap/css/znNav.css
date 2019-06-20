@@ -1,0 +1,70 @@
+.top-nav {
+    background: #0a0b08;
+}
+
+.nav-wrap {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 60px;
+    width: 150px;
+    display: block;
+    background: url("../../img/ic_baidu.png") no-repeat;
+    background-size: 110px;
+    float: left;
+}
+
+.nav-list {
+    float: right;
+    margin-right: 200px;
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+    color: #009AD8;
+    padding: 0 20px;
+    display: block;
+    height: 60px;
+    font-family: "Microsoft YaHei", serif;
+    position: relative;
+}
+
+.nav-list li a:hover {
+    background: #050505;
+    color: #94a3a7;
+}
+
+.nav-list li a:hover::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: #f29400;
+    position: absolute;
+    top: 55px;
+    left: 0;
+}
+
+.nav-list li a:hover:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid #f29400;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    position: absolute;
+    /*(az总高度60px-底部滑动条高度5px-三角形本身高度7px)*/
+    /*48=60-5-7*/
+    top: 48px;
+}
