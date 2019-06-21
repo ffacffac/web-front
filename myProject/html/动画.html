@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>动画</title>
     <style>
+
         div.am {
             width: 100px;
             height: 100px;
@@ -91,7 +92,22 @@
         .smallBig:hover {
             animation: smallBigAmin 2s;
         }
+
+        .ietest {
+            /*\9：ie 6及以上使用这个属性*/
+            color: red \9;
+        }
     </style>
+
+    <!--适配IE浏览器，只有在IE浏览器的情况下，来这里查找样式-->
+    <!--[if ie]>
+    <style>
+        /*l里面可以保护style样式*/
+        .myIE {
+            background-color: green;
+        }
+    </style>
+    <![endif]-->
 </head>
 <body>
 <div class="am"></div>
