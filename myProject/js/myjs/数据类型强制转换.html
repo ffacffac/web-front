@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型强制转换</title>
+
+</head>
+<body>
+<script>
+    //false：转为0，true：转为1
+    // var a=true;
+
+    //null 则转换为0
+    // var a=null;
+
+    //如果是字符串：
+    // 1.如果字符串当中只有数字，转换为10进制(忽略前导0和后导0)
+    // 2.如果是有效的规范的浮点型，转换为浮点值(忽略前导0和后导0)
+    // 3.如果是空字符串，则转换为0
+    // 4.如果是其他的值，返回NaN
+    // var a="123s";
+    // alert(Number(a));
+
+    // var vaule="   123a2vf";
+    // var b=parseInt(vaule,16);
+    // alert(b);
+
+    //转浮点型
+    // var f="12.5ad56";
+    // alert(parseFloat(f));
+
+    //
+    var i=123;
+    var s=i.toString();//1.调用toString转字符串
+    alert(String(i));//2.创建String构造函数
+
+    var bool=Boolean(i);
+    alert(bool);
+
+</script>
+</body>
+</html>

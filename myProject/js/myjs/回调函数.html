@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function math(num1, num2) {
+        return num1 + num2;
+    }
+
+    /**
+     * 将函数当做参数
+     * @param num1
+     * @param fun 函数
+     * @returns {*}
+     */
+    function aa(num1, fun) {
+        alert(num1 + fun)
+    }
+
+    /**
+     * 直接调用fun函数
+     * @param n
+     * @param m
+     * @param fun
+     * @returns {*}
+     */
+    function a1(n, m, fun) {
+        return fun(n, m);
+    }
+
+    function bb(num2, cc) {
+        alert("bb==" + (num2 + cc))
+    }
+
+    function cc() {
+        return 5;
+    }
+
+    aa(2, math(1, 2));
+    bb(3, cc());
+
+    function dg(num1) {
+        if (num1 === 1) {
+            return num1;
+        } else {
+            return num1 * dg(--num1);
+        }
+    }
+
+    alert("递归函数---阶层：" + dg(5));
+
+</script>
+</body>
+</html>

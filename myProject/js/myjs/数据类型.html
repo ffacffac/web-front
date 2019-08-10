@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="数据类型.js">
+
+    </script>
+</head>
+<body>
+<script>
+    // for (var i = 0; i < 6; i++) {
+    //     if (i === 3) {
+    //         break;
+    //     }
+    // }
+    //
+    // var fun = function (a, b, c) {
+    //     return 1 + 2;
+    // }
+    //
+    // for (var i = 1; i <= 10; i++) {
+    //     for (var j = 1; j <= 10 - i; j++) {
+    //         document.write("&nbsp;");
+    //     }
+    //     for (var j = 1; j <= i * 2 - 1; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br/>");
+    // }
+
+    fun(1, 2, 3, 4);
+
+    function fun(a, b, c) {
+        for (var i = 0; i < arguments.length; i++) {
+            alert(arguments[i]);
+        }
+    }
+
+</script>
+</body>
+</html>

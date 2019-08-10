@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置顶层函数</title>
+</head>
+<body>
+<script>
+    //弹出一个带有确认、取消的询问对话框
+    //确认：返回true，反之亦然
+    // var a = confirm("请确认？");
+    // alert(a);
+
+    //对字符串进行编码
+    var zs = escape("张三");
+    document.write("编码：" + zs + "<br\>");
+    //对字符串进行解码
+    document.write("解码：" + unescape(zs))
+
+    //将字符串转换为int
+    // var i=Number("123");
+    // alert(typeof i);
+
+    //对象的声明
+    // var car = {name: "hqj", age: "22", adrr: "广州市"};
+    // alert(car);
+
+    //声明对象，对象里面带函数
+    // var aFun = {
+    //     name: "hqj",
+    //     age: 15,
+    //     address: "广州市天河区",
+    //     myFun: function () {
+    //         return "对象里面的函数";
+    //     }
+    // };
+    // alert(aFun.name + "，" + aFun.myFun());
+
+    //声明数组，遍历数组
+    var arr = ["1", 2, true, "123"];
+    for (var i in arr) {
+        alert(arr[i]);
+    }
+</script>
+
+</body>
+</html>

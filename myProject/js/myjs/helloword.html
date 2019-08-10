@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .neo {
+            width: 200px;
+            height: 200px;
+            background: #0e6bff;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+    <!--引入外部js文件-->
+    <script src="hello.js"></script>
+
+    <script type="text/javascript">
+        for (var i = 0; i < 3; i++) {
+            //输出方式
+            //1.弹窗输出
+            // alert(i);
+            //2.输出到网站上
+            document.write("js 输出到网站上");
+        }
+        //输入框
+        var name = prompt("请输入你的名字");
+        alert(name);
+    </script>
+</head>
+<body>
+<div class="neo">
+    <p>这是js入门</p>
+    <!--js代码-->
+    <a href="javascript:alert('我弹出来了')">点击我弹出窗口</a>
+</div>
+<p onclick="alert('使用onclick方法弹出')">使用onclick方法弹出</p>
+</body>
+</html>

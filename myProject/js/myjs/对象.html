@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<script>
+    //对象声明1
+    // var person = {
+    //     name: "张三",
+    //     age: 20,
+    //     address: "广州市天河区",
+    //     power: function () {
+    //         return "吃饭啦啦123";
+    //     }
+    // };
+    // // alert(person.power());
+    // var pp = {
+    //     mm: "mm",
+    //     myd: function (v, k) {
+    //         return "v is:" + v + "--k is:" + k;
+    //     }
+    // };
+
+    //对象声明2
+    // var per = {};
+    // per.name = "李四";
+    // per.age = 20;
+    // per.address = "上海";
+    // alert(per.name + per.address + per.age);
+
+    //对象声明3，构造方法形式
+    // function Per1(name, age, address) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.address = address;
+    //     this.eat = function () {
+    //         return "吃饭啦";
+    //     }
+    // }
+    //
+    // var p = new Per1("王五", 22, "北京");
+    // alert(p.name + p.age + p.address);
+    // alert(p.eat());
+
+    // //删除属性
+    // delete person.name;
+    // delete person.power();
+    // alert(person.name);
+    // alert(person.power());
+
+    //遍历对象属性
+    // for (var i in person) {
+    //     //模拟数组
+    //     alert(person[i]);
+    // }
+
+    //对象继承
+    // function Car() {
+    //     this.pinp = "车子品牌";
+    //     this.mali = "220匹马力";
+    //     this.youhao = "10L";
+    //     this.xings = function () {
+    //         return "行驶里程30万公里";
+    //     }
+    // }
+    //
+    // function Audi() {
+    //     this.m = "zz";
+    //     this.ff = function (a, b) {
+    //         return a + b;
+    //     }
+    // }
+    //
+    // //继承
+    // Audi.prototype = new Car();
+    // var audiCar = new Audi();
+    // alert(audiCar.xings());
+    // alert(audiCar.m);
+    // alert(audiCar.ff(1, 2));
+
+</script>
+</body>
+</html>
